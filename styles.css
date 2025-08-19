@@ -3,6 +3,7 @@ body {
     font-family: 'Outfit', sans-serif;
     color: hsl(24, 5%, 18%);
     line-height: 1.7;
+    overflow: hidden;
 
 }
 
@@ -12,7 +13,8 @@ h1, h2, h3 {
 }
 
 .container {
-  width: 43.75rem;
+  max-width: 43.75rem;
+  width: 100%;
   padding: 3.125rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 1.25rem;
@@ -55,38 +57,56 @@ ul[class="ingredients-list"] li::marker {
 ol > li::marker{
     color: hsl(14, 45%, 36%);
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 1.875rem;
 
 }
 
 li {
-
-    padding-left: 20px;
+    padding-left: 1.25rem;
     position: relative;
 }
 
 .sub-heading {
     font-size: 1.5em;
     color: hsl(14, 45%, 36%);
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 td span.bold {
     color: hsl(14, 45%, 36%);
-    margin-left: 250px;
-    padding-left: 20px;
 }
 
 td {
     padding: 10px;
     border-bottom: 1px solid hsl(0, 0%, 80%);
-    margin: 50px;
-    text-align: left;
+    padding-left: 1.875rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    .preparation-time, .preparation, .sub-heading {
+        font-size: 1em;
+    }
 }
 
